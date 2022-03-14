@@ -4,19 +4,6 @@ import { useState, useEffect } from "react";
 import React from "react";
 
 function App() {
-  let [pixelSize, setPixelSize] = useState(4);
-  //useEffect(() => {
-  //const timer = setInterval(() => {
-  //if (pixelSize === 1) {
-  //setPixelSize(4);
-  //} else {
-  //setPixelSize(pixelSize - 1);
-  //}
-  //}, 1000);
-  //// clearing interval
-  //return () => clearInterval(timer);
-  //});
-
   return (
     <div className="App">
       <div className="container">
@@ -28,7 +15,7 @@ function App() {
           colorA={[0, 0, 0, 0]} //default = white
           width={600} // default = image width
           height={600} //default = image height
-          pixelSize={pixelSize}
+          pixelSize={2}
         />
       </div>
       <div className="border-corners"></div>

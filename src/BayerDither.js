@@ -6,7 +6,7 @@ export const BayerDither = (props) => {
   const pfpCanvas = useRef(null);
   const [width, setWidth] = useState(255);
   const [height, setHeight] = useState(255);
-  const [pixelSize, setPixelSize] = useState(2);
+  const [pixelSize, setPixelSize] = useState(1);
 
   useEffect(() => {
     setPixelSize(Math.sqrt(props.pixelSize));
