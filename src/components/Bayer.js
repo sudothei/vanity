@@ -51,6 +51,9 @@ export function genBayerU8int8ClampedArray(depth) {
 }
 
 function tileSquareArray(xTimes, yTimes, matrix) {
+  if (xTimes === Infinity) {
+    return matrix;
+  }
   // make horizontalStrip of array
   let horizontalStrip = [];
   // iterate over template rows
@@ -109,8 +112,8 @@ export function genBayerOverlay(width, height, depth) {
   bayer = bayer.flat();
   const bayerMax = Math.max(...bayer);
   bayer = bayer.map((x) => (x / bayerMax) * 255);
-  const xTimes = Math.ceil(width / Math.sqrt(bayer.length));
-  const yTimes = Math.ceil(height / Math.sqrt(bayer.length));
+  let xTimes = Math.ceil(width / Math.sqrt(bayer.length));
+  let yTimes = Math.ceil(height / Math.sqrt(bayer.length));
   bayer = tileSquareArray(xTimes, yTimes, bayer);
   bayer = cropSquare(width, height, bayer, bayer.length);
   return bayer;

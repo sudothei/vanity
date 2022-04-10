@@ -1,23 +1,32 @@
-import pfpImage from "./static/images/lipfp.jpg";
-import { BayerDither } from "./BayerDither";
-import { useState, useEffect } from "react";
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./routes/Home";
+import { useState, useEffect } from "react";
+import { LoadingBar } from "./components/LoadingBar";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoading = () => {
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("load", handleLoading);
+    return () => window.removeEventListener("load", handleLoading);
+  }, []);
+
   return (
     <div className="App">
-      <div className="container">
-        <h1>sudothei</h1>
-        <p>This is a bayer dither</p>
-        <BayerDither
-          image={pfpImage}
-          colorB={[0, 255, 0, 255]} // default = black
-          colorA={[0, 0, 0, 0]} //default = white
-          width={600} // default = image width
-          height={600} //default = image height
-          pixelSize={2}
-        />
-      </div>
+      {loading ? (
+        <LoadingBar />
+      ) : (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </BrowserRouter>
+      )}
       <div className="border-corners"></div>
       <div className="border-edges"></div>
     </div>

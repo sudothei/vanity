@@ -36,8 +36,14 @@ body {
     font-family: 'Syne Mono', 'Monospace';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url('./static/images/background-tileable.jpg');
+    background-image: url('./static/images/background-tileable.webp');
     color: #0f0;
+}
+
+code {
+    font-family: 'Syne Mono', 'Monospace';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body, html, #root, .App {
@@ -47,7 +53,7 @@ body, html, #root, .App {
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.container::-webkit-scrollbar {
+*::-webkit-scrollbar {
     display: none;
 }
 
@@ -55,6 +61,10 @@ body, html, #root, .App {
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     max-width: calc(100% - 4em);
     max-height: calc(100% - 4em);
@@ -65,14 +75,54 @@ body, html, #root, .App {
     top: 2em;
     left: 2em;
     border-radius: 2em;
-}
-
-code {
-    font-family: 'Syne Mono', monospace;
+    padding-bottom: 2em;
 }
 
 canvas {
   image-rendering: -moz-crisp-edges;    /* Firefox */
   image-rendering: -webkit-crisp-edges; /* Webkit (Safari) */
   image-rendering: pixelated;           /* Chrome */
+}
+
+.ui-box {
+    border: 3px solid #0f0;
+    margin: 1em;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: #0f0;
+}
+pre {
+    font-family: monospace !important;
+    font-size: 1em !important;
+}
+
+*:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .border-corners {
+        border: 1em inset tan;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 2em;
+    }
+    .border-edges {
+        border: 1em inset tan;
+    }
+    .container {
+        top: 1em;
+        left: 1em;
+        border-radius: 1em;
+        padding-bottom: 1em;
+        max-width: calc(100% - 2em);
+        max-height: calc(100% - 2em);
+    }
 }
