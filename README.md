@@ -60,10 +60,6 @@
   <img align='left' alt="Selenium" src="https://img.shields.io/badge/-Selenium-43B02A?style=plastic&logo=selenium&logoColor=ffffff" />
 </p>
 <br>
-<br>
-
-<p align="left"> <img src="https://github-readme-stats.vercel.app/api?username=sudothei&show_icons=true&theme=gotham" alt="sudothei" />
-<br>
 
 <h3>𝙲𝚘𝚗𝚗𝚎𝚌𝚝 𝚠𝚒𝚝𝚑 𝚖𝚎</h3>
 <p align='left'>
@@ -71,3 +67,8 @@
 <a href="https://twitter.com/sudothei"><img align='left' alt="Twitter" src="https://img.shields.io/badge/-Twitter-1DA1F2?style=social&logo=twitter" /> </a>
 <a href="https://linkedin.com/in/paigevenuto"><img align='left' alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=social&logo=linkedin" /> </a>
 </p>
+
+<br>
+<br>
+
+<p align="left"> <img src="https://github-readme-stats.vercel.app/api?username=sudothei&show_icons=true&theme=gotham" alt="sudothei" />
