@@ -1,5 +1,3 @@
-<h1>Hello, I'm Paige</h1>
-<h3>Programming Languages</h3>
 <p align='left'>
   <img align='left' alt="C" src="https://img.shields.io/badge/-C-A8B9CC?style=plastic&logo=c&logoColor=ffffff" />
   <img align='left' alt="Lisp" src="https://img.shields.io/badge/%CE%BB-Lisp-111111?style=plastic&logoColor=ffffff&labelColor=ffffff" />
