@@ -1,47 +1,49 @@
 import _ from "lodash";
 
-function bitInterleave(x, y, n) {
-  x = zeroFill(x.toString(2), n).split("");
-  y = zeroFill(y.toString(2), n).split("");
+function bitInterleave(x: number, y: number, n: number): number {
+  const newX = zeroFill(x.toString(2), n).split("");
+  const newY = zeroFill(y.toString(2), n).split("");
   return parseInt(
-    _.zip(x, y)
-      .map((x) => x.join(""))
+    _.zip(newX, newY)
+      .map((i) => i.join(""))
       .join("")
       .toString(),
     2
   );
 }
 
-function zeroFill(number, width) {
-  width -= number.toString().length;
+function zeroFill(number: string, width: number): string {
+  width -= number.length;
   if (width > 0) {
+    // the /\./ thing is regex
     return new Array(width + (/\./.test(number) ? 2 : 1)).join("0") + number;
   }
-  return number + "";
+  return number;
 }
 
-function bitReverse(x, depth) {
+function bitReverse(x: number, depth: number): number {
   return parseInt(
     zeroFill(x.toString(2), depth).split("").reverse().join(""),
     2
   );
 }
 
-function bayerEntry(x, y, depth) {
-  return parseInt(bitReverse(bitInterleave(x ^ y, y, depth), 2 * depth));
+function bayerEntry(x: number, y: number, depth: number): number {
+  // I have no idea why, but the 2nd parseInt is needed or else it'll return a string
+  return parseInt(bitReverse(bitInterleave(x ^ y, y, depth), 2 * depth).toString());
 }
 
-export function genBayerMatrix(depth) {
+export function genBayerMatrix(depth: number): number[][] {
   const r = Array.from({ length: depth ** 2 }, (_, i) => i); // [0,1,2,3]
   return r.map((y) => r.map((x) => bayerEntry(x, y, depth)));
 }
 
-export function genBayerU8int8ClampedArray(depth) {
-  let data = genBayerMatrix(depth);
-  let bayer = [];
-  data = data.flat();
-  const maxAlpha = Math.max(...data);
-  for (let x of data) {
+export function genBayerU8int8ClampedArray(depth: number) {
+  const data: number[][] = genBayerMatrix(depth);
+  const bayer: number[] = [];
+  const flatdata = data.flat();
+  const maxAlpha = Math.max(...flatdata);
+  for (let x of flatdata) {
     bayer.push(0);
     bayer.push(255);
     bayer.push(0);
@@ -50,12 +52,12 @@ export function genBayerU8int8ClampedArray(depth) {
   return new Uint8ClampedArray(bayer);
 }
 
-function tileSquareArray(xTimes, yTimes, matrix) {
+function tileSquareArray(xTimes: number, yTimes: number, matrix ): number[] {
   if (xTimes === Infinity) {
     return matrix;
   }
   // make horizontalStrip of array
-  let horizontalStrip = [];
+  const horizontalStrip: number[][] = [];
   // iterate over template rows
   for (let i = 0; i < matrix.length; i += Math.sqrt(matrix.length)) {
     // take row from template
@@ -67,13 +69,13 @@ function tileSquareArray(xTimes, yTimes, matrix) {
     // add to horizontalStrip
     horizontalStrip.push(outputRow);
   }
-  horizontalStrip = horizontalStrip.flat();
+  const flathorizontalStrip = horizontalStrip.flat();
   // multipy strip yTimes times vertically
-  return Array(yTimes).fill(horizontalStrip).flat();
+  return Array(yTimes).fill(flathorizontalStrip).flat();
 }
 
-function cropSquare(width, height, original, originalLength) {
-  let output = [];
+function cropSquare(width: number, height: number, original, originalLength: number) {
+  let output: number[] = [];
   for (let i = 0; i < originalLength; i += Math.sqrt(originalLength)) {
     output.push(...original.slice(i, i + width));
   }
@@ -82,7 +84,7 @@ function cropSquare(width, height, original, originalLength) {
 }
 
 // pixelSize is used to account for if the canvas is later scaled by pixelSize
-export function genBayerOverlayImage(width, height, depth, pixelSize) {
+export function genBayerOverlayImage(width: number, height: number, depth: number, pixelSize: number) {
   // make one bayer matrix as a template
   const bayerTemplate = genBayerU8int8ClampedArray(depth);
 
@@ -98,23 +100,21 @@ export function genBayerOverlayImage(width, height, depth, pixelSize) {
 
   // oversized bayer matrix is complete
   let oversized = tileSquareArray(xScaleRatio, yScaleRatio, bayerTemplate);
-  oversized = new Uint8ClampedArray(oversized);
+  let newoversized = new Uint8ClampedArray(oversized);
 
   // crop array to exact dimensions
-  let overlay = cropSquare(width * 2, height * 2, oversized, oversized.length);
-  overlay = new Uint8ClampedArray(overlay);
-
-  return overlay;
+  const overlay = cropSquare(width * 2, height * 2, newoversized, newoversized.length);
+  return new Uint8ClampedArray(overlay);
 }
 
-export function genBayerOverlay(width, height, depth) {
-  let bayer = genBayerMatrix(depth);
-  bayer = bayer.flat();
-  const bayerMax = Math.max(...bayer);
-  bayer = bayer.map((x) => (x / bayerMax) * 255);
-  let xTimes = Math.ceil(width / Math.sqrt(bayer.length));
-  let yTimes = Math.ceil(height / Math.sqrt(bayer.length));
-  bayer = tileSquareArray(xTimes, yTimes, bayer);
-  bayer = cropSquare(width, height, bayer, bayer.length);
-  return bayer;
+export function genBayerOverlay(width: number, height: number, depth: number): number[] {
+  let bayer: number[][] = genBayerMatrix(depth);
+  let flatbayer: number[] = bayer.flat();
+  const bayerMax: number = Math.max(...flatbayer);
+  flatbayer = flatbayer.map((x) => (x / bayerMax) * 255);
+  let xTimes = Math.ceil(width / Math.sqrt(flatbayer.length));
+  let yTimes = Math.ceil(height / Math.sqrt(flatbayer.length));
+  flatbayer = tileSquareArray(xTimes, yTimes, flatbayer);
+  flatbayer = cropSquare(width, height, flatbayer, flatbayer.length);
+  return flatbayer;
 }
