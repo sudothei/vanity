@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useEffect } from "react";
 import { BayerDither } from "./BayerDither";
-import sicpWiz from "static/images/sicp-wiz.webp";
-import spiral from "static/images/spiral.webp";
+import * as sicpWiz from "static/images/sicp-wiz.webp";
+import * as spiral from "static/images/spiral.webp";
 
 export const SicpWizard = () => {
   const smallScreen = window.innerWidth <= 700;

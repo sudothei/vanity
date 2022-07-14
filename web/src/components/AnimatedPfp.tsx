@@ -1,5 +1,5 @@
 import * as React from "react";
-import pfpImage from "static/images/lipfp.webp";
+import * as pfpImage from "static/images/lipfp.webp";
 import { useEffect } from "react";
 import { BayerDither } from "./BayerDither";
 
