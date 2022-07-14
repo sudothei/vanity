@@ -16,11 +16,11 @@
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
     "importHelpers": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": false,
+    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
   "exclude": [
