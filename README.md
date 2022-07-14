@@ -10,6 +10,7 @@
   <img align='left' alt="x86" src="https://img.shields.io/badge/x86-Assembly-868686?style=plastic&logoColor=ffffff&labelColor=868686" />
 </p>
 </p>
+<br>
 
 <h3>Tools</h3>
 <p align='left'>
@@ -25,6 +26,7 @@
   <img align='left' alt="NeoVim" src="https://img.shields.io/badge/-neovim-57A143?style=plastic&logo=neovim&logoColor=ffffff" />
   <img align='left' alt="NGINX" src="https://img.shields.io/badge/-NGINX-009639?style=plastic&logo=nginx&logoColor=ffffff" />
 </p>
+<br>
 
 <h3>Databases</h3>
   <img align='left' alt="MariaDB" src="https://img.shields.io/badge/-MariaDB-003545?style=plastic&logo=mariadb&logoColor=ffffff" />
@@ -33,6 +35,7 @@
   <img align='left' alt="PostgreSQL" src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=plastic&logo=postgresql&logoColor=ffffff" />
 <p align='left'>
 </p>
+<br>
 
 <h3>Frontend</h3>
   <img align='left' alt="Babel" src="https://img.shields.io/badge/-Babel-F9DC3E?style=plastic&logo=babel&logoColor=ffffff" /> 
@@ -44,6 +47,7 @@
   <img align='left' alt="Webpack" src="https://img.shields.io/badge/-Webpack-8DD6F9?style=plastic&logo=webpack&logoColor=ffffff" /> 
 <p align='left'>
 </p>
+<br>
 
 <h3>Backend</h3>
 <p align='left'>
@@ -54,8 +58,10 @@
   <img align='left' alt="Celery" src="https://img.shields.io/badge/-Celery-37814A?style=plastic&logo=celery&logoColor=ffffff" />
   <img align='left' alt="Selenium" src="https://img.shields.io/badge/-Selenium-43B02A?style=plastic&logo=selenium&logoColor=ffffff" />
 </p>
+<br>
 
 <p align="left"> <img src="https://github-readme-stats.vercel.app/api?username=sudothei&show_icons=true&theme=gotham" alt="sudothei" />
+<br>
 
 <h3>Connect with me</h3>
 <p align='left'>
