@@ -40,12 +40,10 @@ export const Terminal = () => {
         allowTabs={false}
         color="#00ff00"
         prompt="#00ff00"
-        height={"32em"}
-        width="100%"
+        style={{ width: "32em", height: 100, fontSize: "1em"}}
         startState="maximised"
         promptSymbol={"guest@sudothei: "}
         backgroundColor={"transparent"}
-        style={{ fontSize: "1em" }}
         commands={{
           register: (args, print) => {
             const user = args.slice(1, 2).join(" ");
@@ -89,18 +87,18 @@ export const Terminal = () => {
               });
           },
         }}
-        commandPassThrough={(cmd, print) => {
+        commandPassThrough={(cmd) => {
           axios
             .post("http://sudothei:3333/game", {
-              command: cmd.join(" "),
+              command: cmd,
               username: username,
               password: password,
             })
             .then((response) => {
-              print(response.data);
+              return response.data
             });
         }}
-        descriptions={{
+        description={{
           register: "USAGE: register <username> <password>",
           login: "USAGE: login <username> <password>",
           "start game": "starts the game",

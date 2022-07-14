@@ -9,10 +9,11 @@ export const AnimatedPfp = () => {
     let imageIdx = 0;
     let goUpward = true;
     let wait = 10;
-    const images = document.querySelectorAll(".pfp-image");
-    for (let image of images) image.style.display = "none";
+    const images: NodeListOf<HTMLImageElement> = document.querySelectorAll(".pfp-image");
+    images.forEach((image: HTMLImageElement) =>image.style.display = "none" )
+
     const interval = setInterval(() => {
-      images.forEach((image) => (image.style.display = "none"));
+      images.forEach((image: HTMLImageElement) =>image.style.display = "none" )
       images[imageIdx].style.display = "block";
 
       if (imageIdx === images.length - 1) {

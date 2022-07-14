@@ -7,10 +7,14 @@ import spiral from "static/images/spiral.webp";
 export const SicpWizard = () => {
   const smallScreen = window.innerWidth <= 700;
   const handleScroll = () => {
-    const yScrollAmt = document
-      .querySelector("#sicp-wizard")
-      .getBoundingClientRect().top;
-    document.querySelector("#orb").style.transform = `rotate(${yScrollAmt}deg)`;
+  const wizard = document.querySelector("#sicp-wizard");
+  if (wizard != null){
+      const yScrollAmt = wizard.getBoundingClientRect().top;
+      const orb: HTMLDivElement | null = document.querySelector("#orb");
+          if (orb != null ){
+              orb.style.transform = `rotate(${yScrollAmt}deg)`;
+          }
+  }
   };
   useEffect(() => {
     document.addEventListener("wheel", handleScroll);

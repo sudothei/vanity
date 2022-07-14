@@ -18,9 +18,9 @@ export const HoverCard = (props) => {
       ((doc && doc.clientTop) || (body && body.clientTop) || 0);
     let xTilt = pageX / (window.innerWidth / 2) - 1;
     let yTilt = (pageY / (window.innerHeight / 2) - 1) * -1;
-    const cards = document.querySelectorAll(".card");
+    const cards: NodeListOf<HTMLDivElement> = document.querySelectorAll(".card");
     let tiltAmount = Math.sqrt(Math.pow(xTilt, 2) + Math.pow(yTilt, 2)) * 20;
-    cards.forEach((card) => {
+    cards.forEach((card: HTMLDivElement) => {
       card.style[
         "transform"
       ] = `rotate3d(${yTilt}, ${xTilt}, 0, ${tiltAmount}deg)`;

@@ -3,10 +3,13 @@ import { useEffect } from "react";
 
 export const LoadingBar = () => {
   const incrementLoadingBar = () => {
-    if (document.querySelector("#loading-progress").innerHTML.length < 50) {
-      document.querySelector("#loading-progress").innerHTML =
-        document.querySelector("#loading-progress").innerHTML + "#";
-    }
+  const loadingProgress = document.querySelector("#loading-progress")
+  if (loadingProgress != null) {
+      if (loadingProgress.innerHTML.length < 50) {
+          loadingProgress.innerHTML =
+              loadingProgress.innerHTML + "#";
+      }
+  }
   };
   useEffect(() => {
     const interval = setInterval(() => {

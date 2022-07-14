@@ -3,7 +3,7 @@ import { genBayerOverlay } from "helpers/Bayer";
 import { useRef, useEffect } from "react";
 
 export const BayerDither = (props) => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const width = props.width ? props.width : 255;
   const height = props.height ? props.height : 255;
   const pixelSize = props.pixelSize > 0 ? props.pixelSize : 1;
@@ -16,17 +16,13 @@ export const BayerDither = (props) => {
       // make dummy canvas
       const dummyCanvas = document.createElement("canvas");
       const dummyCtx = dummyCanvas.getContext("2d");
-      dummyCtx.mozImageSmoothingEnabled = false; // firefox
-      dummyCtx.imageSmoothingEnabled = false;
+      dummyCtx!.imageSmoothingEnabled = false;
       dummyCanvas.width = Math.floor(width / pixelSize);
       dummyCanvas.height = Math.floor(height / pixelSize);
 
       // make ctx
-      const ctx = canvasRef.current.getContext("2d");
-      ctx.mozImageSmoothingEnabled = false; // firefox
-      ctx.imageSmoothingEnabled = false;
-      ctx.width = width;
-      ctx.height = height;
+      const ctx = canvasRef.current!.getContext("2d");
+      ctx!.imageSmoothingEnabled = false;
 
       // generate overlay
       const overlay = genBayerOverlay(
@@ -36,16 +32,16 @@ export const BayerDither = (props) => {
       );
 
       // put scaled down image to canvas
-      dummyCtx.drawImage(
-        sourceImg,
-        0,
-        0,
-        Math.floor(width / pixelSize),
-        Math.floor(height / pixelSize)
-      );
+          dummyCtx!.drawImage(
+                  sourceImg,
+                  0,
+                  0,
+                  Math.floor(width / pixelSize),
+                  Math.floor(height / pixelSize)
+                  );
 
       // get scaled down image pixels
-      const imageData = dummyCtx.getImageData(
+      const imageData = dummyCtx!.getImageData(
         0,
         0,
         Math.floor(width / pixelSize),
@@ -75,11 +71,11 @@ export const BayerDither = (props) => {
       // but if I don't it leaves artifacts
       // scale visible canvas
       // put Uint8ClampedArray to dummy canvas
-      ctx.clearRect(0, 0, width, height);
-      dummyCtx.putImageData(imageData, 0, 0);
+      ctx!.clearRect(0, 0, width, height);
+      dummyCtx!.putImageData(imageData, 0, 0);
       // put dummy canvas to visible canvas
-      ctx.drawImage(
-        dummyCtx.canvas,
+      ctx!.drawImage(
+        dummyCtx!.canvas,
         0,
         0,
         Math.floor(width / pixelSize),
