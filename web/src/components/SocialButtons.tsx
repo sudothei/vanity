@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -24,7 +24,7 @@ export const SocialButtons = (props) => {
           target="blank"
           style={{ padding: "0.5em" }}
         >
-          <FontAwesomeIcon icon="fa-brands fa-twitter" size="lg" /> Twitter
+          <FontAwesomeIcon icon={faTwitter} size="lg" /> Twitter
         </a>
       </div>
       <div className="ui-box" style={{ width: "auto" }}>
@@ -33,7 +33,7 @@ export const SocialButtons = (props) => {
           target="blank"
           style={{ padding: "0.5em" }}
         >
-          <FontAwesomeIcon icon="fa-brands fa-linkedin" size="lg" /> LinkedIn
+          <FontAwesomeIcon icon={faLinkedin} size="lg" /> LinkedIn
         </a>
       </div>
       <div className="ui-box" style={{ width: "auto" }}>
@@ -42,7 +42,7 @@ export const SocialButtons = (props) => {
           target="blank"
           style={{ padding: "0.5em" }}
         >
-          <FontAwesomeIcon icon="fa-brands fa-github" size="lg" /> GitHub
+          <FontAwesomeIcon icon={faGithub} size="lg" /> GitHub
         </a>
       </div>
       <div className="ui-box" style={{ width: "auto" }}>
@@ -51,7 +51,7 @@ export const SocialButtons = (props) => {
           target="blank"
           style={{ padding: "0.5em" }}
         >
-          <FontAwesomeIcon icon="fa-brands fa-gitlab" size="lg" /> GitLab
+          <FontAwesomeIcon icon={faGitlab} size="lg" /> GitLab
         </a>
       </div>
     </div>

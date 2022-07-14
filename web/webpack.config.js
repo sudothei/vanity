@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.webp$/,
-        use: [{ loader: "webp-loader" }],
+        use: [{ loader: "file-loader" }, { loader: "webp-loader" }],
       },
     ],
   },

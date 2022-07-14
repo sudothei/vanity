@@ -1,3 +1,4 @@
+import * as React from "react";
 import { SicpWizard } from "../components/SicpWizard";
 import { Certs } from "../components/Certs";
 import { SocialButtons } from "../components/SocialButtons";

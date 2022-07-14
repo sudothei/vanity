@@ -1,5 +1,5 @@
-import React from "react";
-import { genBayerOverlay } from "./Bayer";
+import * as React from "react";
+import { genBayerOverlay } from "helpers/Bayer";
 import { useRef, useEffect } from "react";
 
 export const BayerDither = (props) => {

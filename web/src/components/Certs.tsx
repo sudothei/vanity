@@ -1,8 +1,8 @@
-import React from "react";
-import APlus from "../static/images/comptiaaplus.webp";
-import NetworkPlus from "../static/images/comptianetplus.webp";
-import SecurityPlus from "../static/images/comptiasecplus.webp";
-import DataPlus from "../static/images/comptiadataplus.webp";
+import * as React from "react";
+import APlus from "static/images/comptiaaplus.webp";
+import NetworkPlus from "static/images/comptianetplus.webp";
+import SecurityPlus from "static/images/comptiasecplus.webp";
+import DataPlus from "static/images/comptiadataplus.webp";
 
 export const Cert = (props) => {
   const width = window.innerWidth < 700 ? 100 : 200;

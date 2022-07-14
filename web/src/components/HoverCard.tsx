@@ -1,3 +1,4 @@
+import * as React from "react";
 export const HoverCard = (props) => {
   document.onmousemove = tiltCards;
   function tiltCards(event) {

@@ -1,11 +1,11 @@
 FROM node:latest as build-stage
 WORKDIR /app
-COPY package*.json /app/
-RUN npm install
+COPY package.json /app/
+COPY yarn.lock /app/
+RUN yarn
 COPY ./ /app/
 ENV PATH /app/node_modules/.bin:$PATH
-#RUN CI=true npm test
-RUN npm run build
+RUN yarn run build
 
 FROM alpine/openssl as generate-certs
 RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout web.key -out web.crt -subj \

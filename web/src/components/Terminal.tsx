@@ -1,5 +1,5 @@
+import * as React from "react";
 import TerminalInReact from "terminal-in-react";
-import React from "react";
 import axios from "axios";
 import { useState } from "react";
 

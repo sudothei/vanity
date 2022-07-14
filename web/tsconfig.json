@@ -4,8 +4,9 @@
     "rootDir": ".",
     "outDir": "dist",
     "paths": {
-      "types/*": ["src/types/*"],
-      "helpers/*": ["src/helpers/*"]
+      "helpers/*": ["src/helpers/*"],
+      "static/*": ["src/static/*"],
+      "types/*": ["src/types/*"]
     },
     "module": "esnext",
     "target": "es5",
@@ -21,7 +22,8 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules",
