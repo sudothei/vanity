@@ -10,10 +10,9 @@
   <img align='left' alt="x86" src="https://img.shields.io/badge/x86-Assembly-868686?style=plastic&logoColor=ffffff&labelColor=868686" />
 </p>
 </p>
-<br>
 
 <h3>Tools</h3>
-<p>
+<p align='left'>
   <img align='left' alt="Arduino" src="https://img.shields.io/badge/-Arduino-00979D?style=plastic&logo=arduino&logoColor=ffffff" />
   <img align='left' alt="Bash" src="https://img.shields.io/badge/-Bash-4EAA25?style=plastic&logo=gnubash&logoColor=ffffff" />
   <img align='left' alt="Docker" src="https://img.shields.io/badge/-Docker-46a2f1?style=plastic&logo=docker&logoColor=ffffff" />
@@ -26,16 +25,14 @@
   <img align='left' alt="NeoVim" src="https://img.shields.io/badge/-neovim-57A143?style=plastic&logo=neovim&logoColor=ffffff" />
   <img align='left' alt="NGINX" src="https://img.shields.io/badge/-NGINX-009639?style=plastic&logo=nginx&logoColor=ffffff" />
 </p>
-<br>
 
 <h3>Databases</h3>
   <img align='left' alt="MariaDB" src="https://img.shields.io/badge/-MariaDB-003545?style=plastic&logo=mariadb&logoColor=ffffff" />
   <img align='left' alt="MongoDB" src="https://img.shields.io/badge/-MongoDB-13aa52?style=plastic&logo=mongodb&logoColor=ffffff" />
   <img align='left' alt="MySQL" src="https://img.shields.io/badge/-MySQL-4479A1?style=plastic&logo=mysql&logoColor=ffffff" />
   <img align='left' alt="PostgreSQL" src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=plastic&logo=postgresql&logoColor=ffffff" />
-<p>
+<p align='left'>
 </p>
-<br>
 
 <h3>Frontend</h3>
   <img align='left' alt="Babel" src="https://img.shields.io/badge/-Babel-F9DC3E?style=plastic&logo=babel&logoColor=ffffff" /> 
@@ -45,12 +42,11 @@
   <img align='left' alt="Redux" src="https://img.shields.io/badge/-Redux-764ABC?style=plastic&logo=redux&logoColor=ffffff" />
   <img align='left' alt="Sass" src="https://img.shields.io/badge/-Sass-CC6699?style=plastic&logo=sass&logoColor=ffffff" />
   <img align='left' alt="Webpack" src="https://img.shields.io/badge/-Webpack-8DD6F9?style=plastic&logo=webpack&logoColor=ffffff" /> 
-<p>
+<p align='left'>
 </p>
-<br>
 
 <h3>Backend</h3>
-<p>
+<p align='left'>
   <img align='left' alt="Flask" src="https://img.shields.io/badge/-Flask-111111?style=plastic&logo=flask&logoColor=ffffff" />
   <img align='left' alt="GraphQL" src="https://img.shields.io/badge/-GraphQL-E10098?style=plastic&logo=graphql&logoColor=ffffff" />
   <img align='left' alt="Node.js" src="https://img.shields.io/badge/-Node%2Ejs-43853d?style=plastic&logo=Node.js&logoColor=ffffff" />
@@ -58,13 +54,11 @@
   <img align='left' alt="Celery" src="https://img.shields.io/badge/-Celery-37814A?style=plastic&logo=celery&logoColor=ffffff" />
   <img align='left' alt="Selenium" src="https://img.shields.io/badge/-Selenium-43B02A?style=plastic&logo=selenium&logoColor=ffffff" />
 </p>
-<br>
 
-<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=sudothei&show_icons=true&theme=gotham" alt="sudothei" />
-<br>
+<p align="left"> <img src="https://github-readme-stats.vercel.app/api?username=sudothei&show_icons=true&theme=gotham" alt="sudothei" />
 
 <h3>Connect with me</h3>
-<p>
+<p align='left'>
 <a href="https://app.hackthebox.com/users/33405"><img align='left' alt="Hack The Box" src="https://img.shields.io/badge/-Hack%20The%20Box-9FEF00?style=social&logo=hackthebox" /> </a>
 <a href="https://twitter.com/sudothei"><img align='left' alt="Twitter" src="https://img.shields.io/badge/-Twitter-1DA1F2?style=social&logo=twitter" /> </a>
 <a href="https://linkedin.com/in/paigevenuto"><img align='left' alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=social&logo=linkedin" /> </a>
