@@ -1,5 +1,5 @@
 {
-  "name": "sudothei-website",
+  "name": "sudothei",
   "version": "1.0.0",
   "description": "an overcomplicated display of vanity",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/sudothei/website.git"
+    "url": "git+ssh://git@github.com/sudothei/sudothei.git"
   },
   "keywords": [
     "inventory",
@@ -21,9 +21,9 @@
   "author": "Paige Venuto",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sudothei/website/issues"
+    "url": "https://github.com/sudothei/sudothei/issues"
   },
-  "homepage": "https://github.com/sudothei/website#readme",
+  "homepage": "https://github.com/sudothei/sudothei#readme",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
