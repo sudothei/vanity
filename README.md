@@ -11,7 +11,6 @@
 </p>
 </p>
 <br>
-<br>
 
 <h3>Tools</h3>
 <p align='left'>
@@ -28,7 +27,6 @@
   <img align='left' alt="NGINX" src="https://img.shields.io/badge/-NGINX-009639?style=plastic&logo=nginx&logoColor=ffffff" />
 </p>
 <br>
-<br>
 
 <h3>Databases</h3>
   <img align='left' alt="MariaDB" src="https://img.shields.io/badge/-MariaDB-003545?style=plastic&logo=mariadb&logoColor=ffffff" />
@@ -37,7 +35,6 @@
   <img align='left' alt="PostgreSQL" src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=plastic&logo=postgresql&logoColor=ffffff" />
 <p align='left'>
 </p>
-<br>
 <br>
 
 <h3>Frontend</h3>
@@ -50,7 +47,6 @@
   <img align='left' alt="Webpack" src="https://img.shields.io/badge/-Webpack-8DD6F9?style=plastic&logo=webpack&logoColor=ffffff" /> 
 <p align='left'>
 </p>
-<br>
 <br>
 
 <h3>Backend</h3>
@@ -66,7 +62,6 @@
 <br>
 
 <p align="left"> <img src="https://github-readme-stats.vercel.app/api?username=sudothei&show_icons=true&theme=gotham" alt="sudothei" />
-<br>
 <br>
 
 <h3>Connect with me</h3>
