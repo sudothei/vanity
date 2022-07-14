@@ -21,6 +21,7 @@
   <img align='left' alt="Jest" src="https://img.shields.io/badge/-Jest-C21325?style=plastic&logo=jest&logoColor=ffffff" />
   <img align='left' alt="Kubernetes" src="https://img.shields.io/badge/-Kubernetes-326CE5?style=plastic&logo=kubernetes&logoColor=ffffff" />
   <br>
+  <br>
   <img align='left' alt="LaTeX" src="https://img.shields.io/badge/-LaTeX-008080?style=plastic&logo=latex&logoColor=ffffff" />
   <img align='left' alt="Linux" src="https://img.shields.io/badge/-Linux-1793D1?style=plastic&logo=archlinux&logoColor=ffffff" />
   <img align='left' alt="NeoVim" src="https://img.shields.io/badge/-neovim-57A143?style=plastic&logo=neovim&logoColor=ffffff" />
