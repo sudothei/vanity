@@ -5,12 +5,11 @@ import {
   faTwitter,
   faLinkedin,
   faGithub,
-  faGitlab,
 } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faTwitter, faLinkedin, faGithub, faGitlab);
+library.add(faTwitter, faLinkedin, faGithub);
 
-export const SocialButtons = (props) => {
+export const SocialButtons = () => {
   return (
     <div
       style={{
@@ -43,15 +42,6 @@ export const SocialButtons = (props) => {
           style={{ padding: "0.5em" }}
         >
           <FontAwesomeIcon icon={faGithub} size="lg" /> GitHub
-        </a>
-      </div>
-      <div className="ui-box" style={{ width: "auto" }}>
-        <a
-          href="http://gitlab.com/sudothei"
-          target="blank"
-          style={{ padding: "0.5em" }}
-        >
-          <FontAwesomeIcon icon={faGitlab} size="lg" /> GitLab
         </a>
       </div>
     </div>

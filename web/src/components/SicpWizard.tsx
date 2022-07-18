@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useEffect } from "react";
 import { BayerDither } from "./BayerDither";
-import * as sicpWiz from "static/images/sicp-wiz.webp";
-import * as spiral from "static/images/spiral.webp";
+import * as sicpWiz from "static/media/sicp-wiz.webp";
+import * as spiral from "static/media/spiral.webp";
 
 export const SicpWizard = () => {
   const smallScreen = window.innerWidth <= 700;
@@ -53,7 +53,6 @@ export const SicpWizard = () => {
           colorB={[0, 0, 0, 0]}
         />
       </div>
-
       <div style={{ position: "absolute" }}>
         <BayerDither
           pixelSize={1}

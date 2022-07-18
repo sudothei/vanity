@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "rootDir": ".",
     "outDir": "dist",
     "paths": {
-      "helpers/*": ["src/helpers/*"],
-      "static/*": ["src/static/*"],
-      "types/*": ["src/types/*"]
+      "helpers/*": ["helpers/*"],
+      "components/*": ["components/*"],
+      "static/*": ["static/*"],
+      "types/*": ["types/*"]
     },
     "module": "esnext",
     "target": "es6",

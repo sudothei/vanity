@@ -1,8 +1,7 @@
 import * as React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./routes/Home";
 import { useState, useEffect } from "react";
-import { LoadingBar } from "./components/LoadingBar";
+import { LoadingBar } from "components/LoadingBar";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,11 +20,7 @@ function App() {
       {loading ? (
         <LoadingBar />
       ) : (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </BrowserRouter>
+            <Home />
       )}
       <div className="border-corners"></div>
       <div className="border-edges"></div>

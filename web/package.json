@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "yarn test",
-    "start": "webpack-dev-server --mode=development --open --hot",
-    "build": "webpack --mode=production",
+    "start": "webpack-dev-server --env API_HOSTNAME=$API_HOSTNAME --env API_PORT=$API_PORT --mode=development --open --hot",
+    "build": "webpack --env API_HOSTNAME=$API_HOSTNAME --env API_PORT=$API_PORT --mode=production",
     "prod": "webpack serve --mode=production"
   },
   "repository": {
@@ -41,12 +41,12 @@
     "axios": "^0.27.2",
     "build": "^0.1.4",
     "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
     "lodash": "^4.17.21",
     "npm": "^8.13.2",
     "react": "^18.2.0",
     "react-csv": "^2.2.2",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
     "run": "^1.4.0",
     "sass-loader": "^13.0.2",
     "terminal-in-react": "^4.3.1",

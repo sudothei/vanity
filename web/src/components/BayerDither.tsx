@@ -2,16 +2,26 @@ import * as React from "react";
 import { genBayerOverlay } from "helpers/Bayer";
 import { useRef, useEffect } from "react";
 
-export const BayerDither = (props) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const width = props.width ? props.width : 255;
-  const height = props.height ? props.height : 255;
-  const pixelSize = props.pixelSize > 0 ? props.pixelSize : 1;
+interface BayerDitherProps {
+    width?: number,
+    height?: number,
+    pixelSize: number,
+    image: any,
+    depth: number
+    colorA: number[],
+    colorB: number[]
+}
+
+export const BayerDither = (props: BayerDitherProps) => {
+  const canvasRef: React.RefObject<HTMLCanvasElement> = useRef<HTMLCanvasElement>(null);
+  const width: number = props.width ? props.width : 255;
+  const height: number = props.height ? props.height : 255;
+  const pixelSize: number = props.pixelSize > 0 ? props.pixelSize : 1;
 
   useEffect(() => {
     // make source image
-    const sourceImg = new Image();
-    sourceImg.src = props.image;
+    const sourceImg: HTMLImageElement = new Image();
+    sourceImg.src = props.image.default;
     sourceImg.onload = function () {
       // make dummy canvas
       const dummyCanvas = document.createElement("canvas");

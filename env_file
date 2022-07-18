@@ -1,0 +1,21 @@
+# for the node web server
+COUNTRY=changeme
+STATE=changeme
+LOCATION=changeme
+ORGANIZATION=changeme
+ORGANIZATIONAL_UNIT=changeme
+COMMON_NAME=changeme
+
+# for the api server's password hashing
+BCRYPT_COST_FACTOR=14
+
+# for the api server to connect to the db
+DATABASE_HOSTNAME=host.docker.internal
+DATABASE_PORT=27017
+DATABASE_NAME=sudothei
+DATABASE_USERNAME=sudothei
+# also change in initdb.js
+DATABASE_PASSWORD=changeme
+
+API_HOSTNAME=localhost
+API_PORT=80
