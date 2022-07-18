@@ -21,6 +21,7 @@ export const BayerDither = (props: BayerDitherProps) => {
   useEffect(() => {
     // make source image
     const sourceImg: HTMLImageElement = new Image();
+    sourceImg.crossOrigin = "";
     sourceImg.src = props.image.default;
     sourceImg.onload = function () {
       // make dummy canvas
